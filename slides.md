@@ -140,16 +140,16 @@ function FriendStatus(props) {
 * Class-based:
 ```jsx
 componentDidUpdate(prevProps, prevState) {
-  if (prevState.count !== this.state.count) {
-    document.title = `You clicked ${this.state.count} times`;
-  }
+    if (prevState.count !== this.state.count) {
+      document.title = `You clicked ${this.state.count} times`;
+    }
 }
 ```
 
 * Hooks
 ```jsx
 useEffect(() => {
-  document.title = `You clicked ${count} times`;
+    document.title = `You clicked ${count} times`;
 }, [count]); // Only re-run the effect if count changes
 ```
 ---
@@ -164,7 +164,8 @@ useEffect(() => {
 
 #### But why use hooks?
 * Huge components that are hard to refactor and test.<!-- .element: class="fragment" -->
-* Duplicated logic between different components and lifecycle methods.<!-- .element: class="fragment" -->
+* Duplicated logic between different components<!-- .element: class="fragment" -->
+* Data depending on data, not on lifecycle methods.<!-- .element: class="fragment" -->
 * Complex patterns like render props and higher-order components.<!-- .element: class="fragment" -->
 ---
 
@@ -179,6 +180,7 @@ useEffect(() => {
 #### A better example
 * [Consuming width](https://codesandbox.io/s/lrrnlwrpkz)
 * [Animating with react-spring](https://codesandbox.io/s/ppxnl191zx)
+* [Todo list with React Hooks](https://codesandbox.io/s/github/yazeedb/react-hooks-todo)
 ---
 
 #### Functional !== ~~Stateless~~
@@ -187,7 +189,7 @@ useEffect(() => {
 #### Status
 * Currently alpha feature in v16.7<!-- .element: class="fragment" -->
 * No need to refactor, full backwards compatible<!-- .element: class="fragment" -->
-* Concept for future implementations<!-- .element: class="fragment" -->
+- Concept for future implementations (not production ready)<!-- .element: class="fragment" -->
 ---
 
 ## Sources
